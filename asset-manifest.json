@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-49-conspect/static/css/main.f5078b93.css",
+    "main.css": "/react-49-conspect/static/css/main.0eba23c8.css",
     "main.js": "/react-49-conspect/static/js/main.bedc5599.js",
     "index.html": "/react-49-conspect/index.html",
-    "main.f5078b93.css.map": "/react-49-conspect/static/css/main.f5078b93.css.map",
+    "main.0eba23c8.css.map": "/react-49-conspect/static/css/main.0eba23c8.css.map",
     "main.bedc5599.js.map": "/react-49-conspect/static/js/main.bedc5599.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5078b93.css",
+    "static/css/main.0eba23c8.css",
     "static/js/main.bedc5599.js"
   ]
 }
