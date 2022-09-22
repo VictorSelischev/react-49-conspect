@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-49-conspect/static/css/main.e6c13ad2.css",
+    "main.js": "/react-49-conspect/static/js/main.0c346e8a.js",
+    "index.html": "/react-49-conspect/index.html",
+    "main.e6c13ad2.css.map": "/react-49-conspect/static/css/main.e6c13ad2.css.map",
+    "main.0c346e8a.js.map": "/react-49-conspect/static/js/main.0c346e8a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.0c346e8a.js"
+  ]
+}
