@@ -1,12 +1,5 @@
-import { Profile } from './components/Profile/Profile';
-// import { Statistics } from './Statistics/Statistics';
-// import { FriendList } from './FriendList/FriendList';
-// import { TransactionHistory } from './TransactionHistory/TransactionHistory';
-
-import user from './components/Profile/user.json';
-// import data from './Statistics/data.json';
-// import friends from './FriendList/friends.json';
-// import transactions from './TransactionHistory/transactions.json';
+import { Counter } from './components/Counter/Counter';
+import { MyClassComponent } from './components/MyClassComponent/MyClassComponent';
 
 export const App = () => {
   return (
@@ -24,13 +17,9 @@ export const App = () => {
         backgroundColor: '#e7ecf2',
       }}
     >
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
+      <MyClassComponent />
+      <button onClick={event => console.log(event)}>Click me!</button>
+      <Counter step={5} />
     </div>
   );
 };
