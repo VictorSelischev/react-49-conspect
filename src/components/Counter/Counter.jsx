@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { ReactDOM } from 'react-dom';
 
-import css from './Counter.module.css';
+// import css from './Counter.module.css';
 
 class Counter extends Component {
 
@@ -23,11 +23,11 @@ class Counter extends Component {
     const { step } = this.props;
 
     return (
-      <div className={css.section}>
-        <span>0</span>
+      <div className="section">
         <button type="button" onClick={this.handleIncrement}>
           Increment by {step}
         </button>
+        <span>0</span>
         <button type="button" onClick={this.handleDecrement}>
           Decrement by {step}
         </button>

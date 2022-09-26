@@ -1,5 +1,6 @@
 import { Counter } from './components/Counter/Counter';
 import { MyClassComponent } from './components/MyClassComponent/MyClassComponent';
+import Focus from './components/Focus/Focus';
 
 export const App = () => {
   return (
@@ -18,8 +19,9 @@ export const App = () => {
       }}
     >
       <MyClassComponent />
-      <button onClick={event => console.log(event)}>Click me!</button>
+      <button className="section" onClick={event => console.log(event)}>Click me!</button>
       <Counter step={5} />
+      <Focus />
     </div>
   );
 };
