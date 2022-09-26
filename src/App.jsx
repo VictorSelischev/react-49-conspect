@@ -18,7 +18,7 @@ export const App = () => {
         alignItems: 'center',
         fontSize: 30,
         color: '#010101',
-        backgroundColor: '#5B84B1FF',
+        backgroundColor: '#00FA9A',
       }}
     >
       <MyClassComponent />
