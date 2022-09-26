@@ -5,13 +5,16 @@ export default function FocusBlur() {
       onFocus={(e) => {
         if (e.currentTarget === e.target) {
             console.log('focused self');
-            console
+            console.log(e.currentTarget);
+            console.log(e.target);
         } else {
-          console.log('focused child', e.target);
+            console.log('focused child', e.target);
+            console.log(e.currentTarget);
         }
         if (!e.currentTarget.contains(e.relatedTarget)) {
           // Not triggered when swapping focus between children
-          console.log('focus entered self');
+            console.log('focus entered self');
+            console.log(e.relatedTarget);
         }
       }}
       onBlur={(e) => {
@@ -22,7 +25,8 @@ export default function FocusBlur() {
         }
         if (!e.currentTarget.contains(e.relatedTarget)) {
           // Not triggered when swapping focus between children
-          console.log('focus left self');
+            console.log('focus left self');
+            console.log(e.relatedTarget);
         }
       }}
     >
