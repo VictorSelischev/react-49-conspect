@@ -1,6 +1,8 @@
 import { Counter } from './components/Counter/Counter';
 import { MyClassComponent } from './components/MyClassComponent/MyClassComponent';
 import Focus from './components/Focus/Focus';
+import Blur from './components/Blur/Blur';
+import FocusBlur from './components/FocusBlur/FocusBlur';
 
 export const App = () => {
   return (
@@ -13,15 +15,17 @@ export const App = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 25,
         color: '#010101',
-        backgroundColor: '#e7ecf2',
+        backgroundColor: '#5B84B1FF',
       }}
     >
       <MyClassComponent />
-      <button className="section" onClick={event => console.log(event)}>Click me!</button>
+      <button onClick={event => console.log(event)}>Click me!</button>
       <Counter step={5} />
       <Focus />
+      <Blur />
+      <FocusBlur />
     </div>
   );
 };
