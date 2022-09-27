@@ -4,6 +4,7 @@ import Focus from './components/Focus/Focus';
 import Blur from './components/Blur/Blur';
 import FocusBlur from './components/FocusBlur/FocusBlur';
 import { Toggle } from './components/Toggle/Toggle';
+import { AppButton } from './components/AppButton/AppButton';
 
 export const App = () => {
   return (
@@ -28,6 +29,7 @@ export const App = () => {
       <Blur />
       <FocusBlur />
       <Toggle>`&lt;Toggle&gt;Этот компонент работает&lt;/Toggle&gt;`</Toggle>
+      <AppButton />
     </div>
   );
 };
