@@ -7,6 +7,7 @@ import { Toggle } from './components/Toggle/Toggle';
 import { AppButton } from './components/AppButton/AppButton';
 import { LoginForm } from './components/LoginForm/LoginForm';
 import { AppForm } from './components/AppForm/AppForm';
+import { SignUpForm } from './components/SignUpForm/SignUpForm';
 
 export const App = () => {
   return (
@@ -34,6 +35,7 @@ export const App = () => {
       <AppButton />
       <LoginForm onSubmit={values => console.log(values)} />
       <AppForm />
+      <SignUpForm onSubmit={values => console.log(values)} />
     </div>
   );
 };
