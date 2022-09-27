@@ -22,37 +22,20 @@ class Counter extends Component {
     value: this.props.initialValue,
   };
 
-  plusIncrement = () =>
-    this.setState({ value: this.state.value + this.state.step });
-  plusDecrement = () =>
-    this.setState({ value: this.state.value - this.state.step });
+  // plusIncrement = () =>
+  //   this.setState({ value: this.state.value + this.state.step });
+  // plusDecrement = () =>
+  //   this.setState({ value: this.state.value - this.state.step });
 
-  threeInrement = () => {
-    // Запустим цикл и создадим 3 операции обновления
-    for (let i = 0; i < 3; i += 1) {
-      // Если посмотреть состояние, на всех итерациях будет 0
-      // Потому что это синхронный код и обновление состояния еще не произошло
-      console.log(this.state.value);
-
-      this.setState(prevState => {
-        console.log(prevState.value + 1);
-        return { value: prevState.value + 1 };
-      });
-    }
+  plusIncrement = () => {
+    this.setState((state, props) => ({
+      value: state.value + props.step,
+    }));
   };
-
-  threeDecrement = () => {
-    // Запустим цикл и создадим 3 операции обновления
-    for (let i = 0; i < 3; i += 1) {
-      // Если посмотреть состояние, на всех итерациях будет 0
-      // Потому что это синхронный код и обновление состояния еще не произошло
-      console.log(this.state.value);
-
-      this.setState(prevState => {
-        console.log(prevState.value - 1);
-        return { value: prevState.value - 1 };
-      });
-    }
+  plusDecrement = () => {
+    this.setState((state, props) => ({
+      value: state.value - props.step,
+    }));
   };
 
   handleIncrement = evt => {
@@ -71,11 +54,11 @@ class Counter extends Component {
 
     return (
       <div className="section">
-        <button type="button" onClick={this.threeDecrement}>
+        <button type="button" onClick={this.plusDecrement}>
           Decrement by {step}
         </button>
         <span>{this.state.value}</span>
-        <button type="button" onClick={this.threeInrement}>
+        <button type="button" onClick={this.plusIncrement}>
           Increment by {step}
         </button>
       </div>
