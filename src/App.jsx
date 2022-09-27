@@ -6,6 +6,7 @@ import FocusBlur from './components/FocusBlur/FocusBlur';
 import { Toggle } from './components/Toggle/Toggle';
 import { AppButton } from './components/AppButton/AppButton';
 import { LoginForm } from './components/LoginForm/LoginForm';
+import { AppForm } from './components/AppForm/AppForm';
 
 export const App = () => {
   return (
@@ -32,6 +33,7 @@ export const App = () => {
       <Toggle>`&lt;Toggle&gt;Этот компонент работает&lt;/Toggle&gt;`</Toggle>
       <AppButton />
       <LoginForm onSubmit={values => console.log(values)} />
+      <AppForm />
     </div>
   );
 };
