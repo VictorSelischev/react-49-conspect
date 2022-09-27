@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 // import css from './Counter.module.css';
 
 class Counter extends Component {
+  
+
   static defaultProps = {
     step: 1,
     initialValue: 0,
@@ -18,11 +20,12 @@ class Counter extends Component {
   // }
 
   state = {
+    step: this.props.step,
     value: this.props.initialValue,
   };
 
-  plusIncrement = () => this.setState({ value: this.state.value + 1 });
-  plusDecrement = () => this.setState({ value: this.state.value - 1 });
+  plusIncrement = () => this.setState({ value: this.state.value + this.state.step, step: this.state.step + 1 });
+  plusDecrement = () => this.setState({ value: this.state.value - this.state.step, step: this.state.step - 1 });
 
   handleIncrement = evt => {
     console.log('Increment button was clicked!', evt); // работает

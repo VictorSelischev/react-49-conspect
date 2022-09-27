@@ -23,7 +23,7 @@ export const App = () => {
     >
       <MyClassComponent />
       <button onClick={event => console.log(event)}>Click me!</button>
-      <Counter step={1} initialValue={0} />
+      <Counter step={2} initialValue={13} />
       <Focus />
       <Blur />
       <FocusBlur />
