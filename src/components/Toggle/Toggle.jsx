@@ -24,7 +24,7 @@ class Toggle extends Component {
           <button onClick={this.hide}>Hide</button>
         </div>
         <div className={css.text}>{isOpen && <p >{children}</p>}</div>
-        <button onClick={this.toggle}>Show|Hide</button>
+        <button onClick={this.toggle}>{ isOpen ? 'Hide' : 'Show' }</button>
       </div>
     );
   }
