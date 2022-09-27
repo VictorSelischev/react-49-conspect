@@ -8,6 +8,10 @@ class Toggle extends Component {
 
   hide = () => this.setState({ isOpen: false }, () => console.log(this.state));
 
+  toggle = () => {
+    this.setState(state => ({ isOpen: !state.isOpen }));
+  };
+
   render() {
     const { isOpen } = this.state;
     const { children } = this.props;
@@ -19,7 +23,8 @@ class Toggle extends Component {
           <button onClick={this.show}>Show</button>
           <button onClick={this.hide}>Hide</button>
         </div>
-        {isOpen && <p className={css.text}>{children}</p>}
+        <div className={css.text}>{isOpen && <p >{children}</p>}</div>
+        <button onClick={this.toggle}>Show|Hide</button>
       </div>
     );
   }
