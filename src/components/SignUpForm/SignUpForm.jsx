@@ -35,14 +35,37 @@ class SignUpForm extends Component {
     const { login, email, password } = this.state;
 
     return (
-      <form className="section" onSubmit={this.handleSubmit}>
-        <label className={css.text} style={{ marginRight: '20px' }}>
+      <form className="section" style={{display: 'flex', flexDirection: 'column', width: '250px'}} onSubmit={this.handleSubmit}>
+        <label className={css.text} style={{ marginBottom: '20px' }}>
           Name
           <input
-            style={{ marginLeft: '10px' }}
+            style={{ marginLeft: '40px' }}
             type="text"
             placeholder="Enter login"
+            name="login"
             value={login}
+            onChange={this.handleChange}
+          />
+        </label>
+        <label className={css.text} style={{ marginBottom: '20px' }}>
+          Email
+          <input
+            style={{ marginLeft: '43px' }}
+            type="email"
+            placeholder="Enter email"
+            name="email"
+            value={email}
+            onChange={this.handleChange}
+          />
+        </label>
+        <label className={css.text} style={{ marginBottom: '20px' }}>
+          Password
+          <input
+            style={{ marginLeft: '22px' }}
+            type="password"
+            placeholder="Enter password"
+            name="password"
+            value={password}
             onChange={this.handleChange}
           />
         </label>
