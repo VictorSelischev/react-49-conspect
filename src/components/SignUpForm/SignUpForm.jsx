@@ -5,6 +5,7 @@ const INITIAL_STATE = {
   login: '',
   email: '',
   password: '',
+  agreed: false,
 };
 
 class SignUpForm extends Component {
@@ -14,15 +15,19 @@ class SignUpForm extends Component {
   // Для всех инпутов создаем один обарботчик
   // Различать инпуты будем по атрибуту name
   handleChange = evt => {
-    const { name, value } = evt.target;
-    this.setState({ [name]: value });
+    const { name, value, type, checked } = evt.target;
+    // Если тип элемента checkbox, берем значение checked,
+    // в противном случае value
+    this.setState({ [name]: type === 'checkbox' ? checked : value });
   };
 
   // Вызывается при отправке формы
   handleSubmit = evt => {
     evt.preventDefault();
-    const { login, email, password } = this.state;
-    console.log(`Login: ${login}, Email: ${email}, Password: ${password}`);
+    const { login, email, password, agreed } = this.state;
+    console.log(
+      `Login: ${login}, Email: ${email}, Password: ${password}, Agreed: ${agreed}`
+    );
     this.props.onSubmit({ ...this.state });
     this.reset();
   };
@@ -32,10 +37,14 @@ class SignUpForm extends Component {
   };
 
   render() {
-    const { login, email, password } = this.state;
+    const { login, email, password, agreed } = this.state;
 
     return (
-      <form className="section" style={{display: 'flex', flexDirection: 'column', width: '250px'}} onSubmit={this.handleSubmit}>
+      <form
+        className="section"
+        style={{ display: 'flex', flexDirection: 'column', width: '250px' }}
+        onSubmit={this.handleSubmit}
+      >
         <label className={css.text} style={{ marginBottom: '20px' }}>
           Name
           <input
@@ -69,8 +78,20 @@ class SignUpForm extends Component {
             onChange={this.handleChange}
           />
         </label>
+        <label style={{fontSize: "12px", marginBottom: '20px'}}>
+          <input
+            type="checkbox"
+            name="agreed"
+            checked={agreed}
+            onChange={this.handleChange}
+          />
+          Agree to terms
+          
+        </label>
 
-        <button type="submit">Sign up as {login}</button>
+        <button type="submit" disabled={!agreed}>
+          Sign up as {login}
+        </button>
       </form>
     );
   }
