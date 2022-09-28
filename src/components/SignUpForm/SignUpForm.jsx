@@ -1,11 +1,18 @@
 import { Component } from 'react';
 import css from './SignUpForm.module.css';
 
+// Используем Enumerable чтобы не болеть антипаттерном "магические строки"
+const Gender = {
+  MALE: "male",
+  FEMALE: "female",
+};
+
 const INITIAL_STATE = {
   login: '',
   email: '',
   password: '',
   agreed: false,
+  gender: null,
 };
 
 class SignUpForm extends Component {
@@ -37,7 +44,7 @@ class SignUpForm extends Component {
   };
 
   render() {
-    const { login, email, password, agreed } = this.state;
+    const { login, email, password, agreed, gender } = this.state;
 
     return (
       <form
@@ -78,7 +85,30 @@ class SignUpForm extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <label style={{fontSize: "12px", marginBottom: '20px'}}>
+        <section >
+          <h2 style={{fontSize: '20px', lineHeight: '1.2'}}>Choose your gender</h2>
+          <label style={{fontSize: '10px', marginRight: '60px'}}>
+            Male
+            <input
+              type="radio"
+              checked={gender === Gender.MALE}
+              name="gender"
+              value={Gender.MALE}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label style={{fontSize: '10px'}}>
+            Female
+            <input
+              type="radio"
+              checked={gender === Gender.FEMALE}
+              name="gender"
+              value={Gender.FEMALE}
+              onChange={this.handleChange}
+            />
+          </label>
+        </section>
+        <label style={{ fontSize: '12px', marginBottom: '20px', marginTop: '20px' }}>
           <input
             type="checkbox"
             name="agreed"
@@ -86,7 +116,6 @@ class SignUpForm extends Component {
             onChange={this.handleChange}
           />
           Agree to terms
-          
         </label>
 
         <button type="submit" disabled={!agreed}>
