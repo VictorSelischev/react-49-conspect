@@ -13,6 +13,7 @@ const INITIAL_STATE = {
   password: '',
   agreed: false,
   gender: null,
+  age: "",
 };
 
 class SignUpForm extends Component {
@@ -44,12 +45,12 @@ class SignUpForm extends Component {
   };
 
   render() {
-    const { login, email, password, agreed, gender } = this.state;
+    const { login, email, password, agreed, gender, age } = this.state;
 
     return (
       <form
         className="section"
-        style={{ display: 'flex', flexDirection: 'column', width: '250px' }}
+        style={{ display: 'flex', flexDirection: 'column', width: '250px', border: '2px solid white', borderRadius: '8px', padding: "40px", marginTop: '60px' }}
         onSubmit={this.handleSubmit}
       >
         <label className={css.text} style={{ marginBottom: '20px' }}>
@@ -108,6 +109,17 @@ class SignUpForm extends Component {
             />
           </label>
         </section>
+        <label style={{fontSize: '20px'}}>
+          Choose your age
+          <select style={{ marginLeft: "20px" }} name="age" value={age} onChange={this.handleChange}>
+            <option value="" disabled>
+              ...
+            </option>
+            <option value="18-25">18-25</option>
+            <option value="26-35">26-35</option>
+            <option value="36+">36+</option>
+          </select>
+        </label>
         <label style={{ fontSize: '12px', marginBottom: '20px', marginTop: '20px' }}>
           <input
             type="checkbox"
