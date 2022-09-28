@@ -9,6 +9,7 @@ import { LoginForm } from './components/LoginForm/LoginForm';
 import { AppForm } from './components/AppForm/AppForm';
 import { SignUpForm } from './components/SignUpForm/SignUpForm';
 import { FormId } from './components/FormId/FormId';
+import { FormReact } from './components/FormReact/FormReact';
 
 export const App = () => {
   return (
@@ -38,6 +39,7 @@ export const App = () => {
       <AppForm />
       <SignUpForm onSubmit={values => console.log(values)} />
       <FormId />
+      <FormReact />
     </div>
   );
 };
