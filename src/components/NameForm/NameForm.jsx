@@ -2,14 +2,17 @@ import { Component } from 'react';
 
 class NameForm extends Component {
   state = {
-    value: '',
+    input: '',
+    textarea: 'Please write an essay about your favorite DOM element.',
   };
 
   handleChange = event => {
-    console.log(event);
-    console.log(event.target);
-    console.log(event.target.value);
-    this.setState({ value: event.target.value });
+    console.log(event); // событие
+    console.log(event.target); // элемент, на котором было событие
+    console.log(event.target.value); // значение элемента, на котором было событие
+    console.log(event.target.localName); // локальное (собственное) имя элемента, на котором было событие
+    const { localName, value } = event.target;
+    this.setState({ [localName]: value });
   };
 
   handleSubmit = event => {
@@ -40,6 +43,16 @@ class NameForm extends Component {
             style={{ marginLeft: '30px', marginBottom: '10px' }}
             type="text"
             name="name"
+          />
+        </label>
+        <label
+          style={{ fontSize: '15px', marginLeft: '30px', marginBottom: '10px' }}
+        >
+          Essay:
+          <textarea
+            style={{ marginLeft: '10px' }}
+            value={this.state.textarea}
+            onChange={this.handleChange}
           />
         </label>
         <input type="submit" value="Submit" />
