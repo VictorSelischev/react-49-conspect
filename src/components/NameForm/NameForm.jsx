@@ -4,6 +4,7 @@ class NameForm extends Component {
   state = {
     input: '',
     textarea: 'Привет! Тут просто немного текста внутри тега textarea',
+    select: 'coconut',
   };
 
   handleChange = event => {
@@ -39,7 +40,7 @@ class NameForm extends Component {
           Name:
           <input
             onChange={this.handleChange}
-            value={this.state.value}
+            value={this.state.input}
             style={{ marginLeft: '30px', marginBottom: '10px' }}
             type="text"
             name="name"
@@ -56,6 +57,17 @@ class NameForm extends Component {
             onChange={this.handleChange}
           />
         </label>
+        <select
+          
+          style={{ marginBottom: '10px' }}
+          value={this.state.select}
+          onChange={this.handleChange}
+        >
+          <option value="grapefruit">Грейпфрут</option>
+          <option value="lime">Лайм</option>
+          <option value="coconut">Кокос</option>
+          <option value="mango">Манго</option>
+        </select>
         <input type="submit" value="Submit" />
       </form>
     );
