@@ -3,7 +3,7 @@ import { Component } from 'react';
 class NameForm extends Component {
   state = {
     input: '',
-    textarea: 'Please write an essay about your favorite DOM element.',
+    textarea: 'Привет! Тут просто немного текста внутри тега textarea',
   };
 
   handleChange = event => {
@@ -50,6 +50,7 @@ class NameForm extends Component {
         >
           Essay:
           <textarea
+            rows={3}
             style={{ marginLeft: '10px' }}
             value={this.state.textarea}
             onChange={this.handleChange}
