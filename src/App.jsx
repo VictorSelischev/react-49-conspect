@@ -10,6 +10,7 @@ import { AppForm } from './components/AppForm/AppForm';
 import { SignUpForm } from './components/SignUpForm/SignUpForm';
 import { FormId } from './components/FormId/FormId';
 import { NameForm } from './components/NameForm/NameForm';
+import Reservation from './components/Reservation/Reservation';
 
 export const App = () => {
   return (
@@ -40,6 +41,7 @@ export const App = () => {
       <SignUpForm onSubmit={values => console.log(values)} />
       <FormId />
       <NameForm />
+      <Reservation />
     </div>
   );
 };

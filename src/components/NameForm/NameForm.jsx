@@ -58,7 +58,6 @@ class NameForm extends Component {
           />
         </label>
         <select
-          
           style={{ marginBottom: '10px' }}
           value={this.state.select}
           onChange={this.handleChange}
