@@ -11,6 +11,7 @@ import { SignUpForm } from './components/SignUpForm/SignUpForm';
 import { FormId } from './components/FormId/FormId';
 import { NameForm } from './components/NameForm/NameForm';
 import Reservation from './components/Reservation/Reservation';
+import HelloMessage from './components/HelloMessage/HelloMessage';
 
 export const App = () => {
   return (
@@ -28,6 +29,7 @@ export const App = () => {
         backgroundColor: '#00FA9A',
       }}
     >
+      <HelloMessage name="Виктор" />
       <MyClassComponent />
       <button onClick={event => console.log(event)}>Click me!</button>
       <Counter step={1} initialValue={0} />
