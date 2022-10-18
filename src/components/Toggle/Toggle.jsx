@@ -15,7 +15,7 @@ class Toggle extends Component {
   render() {
     const { isOpen } = this.state;
     const { children } = this.props;
-    console.log(children);
+    // console.log(children);
 
     return (
       <div className={css.center}>
