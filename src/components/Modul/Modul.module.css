@@ -1,0 +1,26 @@
+.modul__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modul__window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+    width: 100%;
+    min-height: 512px;
+
+    padding: 40px;
+
+    font-size: 14px;
+
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.5), 0px 10px 10px 0px rgba(0, 0, 0, 0.14), 0px 10px 30px 0px rgba(0, 0, 0, 0.12);
+}

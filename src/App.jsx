@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import { Component } from 'react';
 
 import { Counter } from './components/Counter/Counter';
 import { MyClassComponent } from './components/MyClassComponent/MyClassComponent';
@@ -15,17 +15,14 @@ import { NameForm } from './components/NameForm/NameForm';
 import Reservation from './components/Reservation/Reservation';
 import HelloMessage from './components/HelloMessage/HelloMessage';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
+import { Modul } from './components/Modul/Modul';
 
 class App extends Component {
   state = {
     hasError: false,
     decrement: 1,
+    showModul: false,
   };
-
-  decrementApp = () => {
-    this.setState(prevState => ({ decrement: prevState.decrement + 1 }))
-    console.log(this.state.decrement);
-  }
 
   componentDidMount() {
     console.log('App ComponentDidMount');
@@ -43,7 +40,17 @@ class App extends Component {
     // logErrorToMyService(error, info);
   }
 
+  decrementApp = () => {
+    this.setState(prevState => ({ decrement: prevState.decrement + 1 }));
+    console.log(this.state.decrement);
+  };
+
+  toggleModal = () => {
+    this.setState(prevState => ({ showModul: !prevState.showModul }));
+  };
+
   render() {
+    const { showModul } = this.state;
     console.log('App render');
     return (
       <div
@@ -77,6 +84,22 @@ class App extends Component {
         <NameForm />
         <Reservation />
         <ErrorBoundary />
+        <button type="button" onClick={this.toggleModal} style={{marginTop: 60}}>
+          Открыть модалку
+        </button>
+        {showModul && (
+          <Modul>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
+              deserunt reiciendis magnam dignissimos adipisci fuga repellendus
+              iure quidem officiis veniam ratione blanditiis, voluptate nisi
+              magni quod sapiente maxime itaque eius.
+            </p>
+            <button type="button" onClick={this.toggleModal}>
+              Закрыть модалку
+            </button>
+          </Modul>
+        )}
       </div>
     );
   }
