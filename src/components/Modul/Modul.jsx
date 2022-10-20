@@ -19,9 +19,15 @@ class Modul extends Component {
     }
   };
 
+  handleBackdropClick = evt => {
+    if (evt.currentTarget === evt.target) {
+      this.props.onClose();
+    }
+  }
+
   render() {
     return createPortal(
-      <div className={css.modul__backdrop}>
+      <div className={css.modul__backdrop} onClick={this.handleBackdropClick}>
         <div className={css.modul__window}>{this.props.children}</div>
       </div>,
       modalRoot
