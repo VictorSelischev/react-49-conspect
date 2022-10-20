@@ -91,7 +91,7 @@ class App extends Component {
           Открыть модалку
         </button>
         {showModul && (
-          <Modul>
+          <Modul onClose={this.toggleModal}>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
               deserunt reiciendis magnam dignissimos adipisci fuga repellendus
