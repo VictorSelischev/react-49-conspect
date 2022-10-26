@@ -17,6 +17,7 @@ import HelloMessage from './components/HelloMessage/HelloMessage';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 import { Modul } from './components/Modul/Modul';
 import { AppuseState } from './components/AppuseState/AppuseState';
+import { AppuseEffect } from './components/AppuseEffect/AppuseEffect';
 
 class App extends Component {
   state = {
@@ -105,6 +106,7 @@ class App extends Component {
           </Modul>
         )}
         <AppuseState />
+        <AppuseEffect />
       </div>
     );
   }
