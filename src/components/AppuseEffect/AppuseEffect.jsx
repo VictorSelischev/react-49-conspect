@@ -7,9 +7,16 @@ export const AppuseEffect = () => {
     //     document.title = `You clicked ${value} times`;
     // })
 
+    // componentDidMount
+    // useEffect(() => {
+    //     console.log("Mounting phase: same when componentDidMount runs");
+    // }, [])
+
+    // componentDidUpdate
     useEffect(() => {
-        console.log("Mounting phase: same when componentDidMount runs");
-    }, [])
+        console.log(value);
+        console.log("Updating phase: same when componentDidUpdate runs");
+    }, [value])
 
     return (
         <div>
