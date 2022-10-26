@@ -3,9 +3,13 @@ import { useState, useEffect } from 'react';
 export const AppuseEffect = () => {
     const [value, setValue] = useState(0);
 
+    // useEffect(() => {
+    //     document.title = `You clicked ${value} times`;
+    // })
+
     useEffect(() => {
-        document.title = `You clicked ${value} times`;
-    })
+        console.log("Mounting phase: same when componentDidMount runs");
+    }, [])
 
     return (
         <div>
