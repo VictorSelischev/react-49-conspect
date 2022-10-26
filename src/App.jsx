@@ -18,6 +18,7 @@ import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 import { Modul } from './components/Modul/Modul';
 import { AppuseState } from './components/AppuseState/AppuseState';
 import { AppuseEffect } from './components/AppuseEffect/AppuseEffect';
+import { AppListDeps } from './components/AppListDeps/AppListDeps';
 
 class App extends Component {
   state = {
@@ -107,6 +108,7 @@ class App extends Component {
         )}
         <AppuseState />
         <AppuseEffect />
+        <AppListDeps />
       </div>
     );
   }
