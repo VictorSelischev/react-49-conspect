@@ -16,6 +16,7 @@ import Reservation from './components/Reservation/Reservation';
 import HelloMessage from './components/HelloMessage/HelloMessage';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 import { Modul } from './components/Modul/Modul';
+import { AppuseState } from './components/AppuseState/AppuseState';
 
 class App extends Component {
   state = {
@@ -87,7 +88,7 @@ class App extends Component {
         <NameForm />
         <Reservation />
         <ErrorBoundary />
-        <button type="button" onClick={this.toggleModal} style={{marginTop: 60}}>
+        <button type="button" onClick={this.toggleModal} style={{marginTop: 60, marginBottom: 60}}>
           Открыть модалку
         </button>
         {showModul && (
@@ -103,45 +104,10 @@ class App extends Component {
             </button>
           </Modul>
         )}
+        <AppuseState />
       </div>
     );
   }
 }
 
 export { App };
-
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         // height: '100vh',
-//         paddingTop: 88,
-//         paddingBottom: 88,
-//         display: 'flex',
-//         flexDirection: 'column',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 30,
-//         color: '#010101',
-//         backgroundColor: '#00FA9A',
-//       }}
-//     >
-//       <HelloMessage name="Виктор" />
-//       <MyClassComponent />
-//       <button onClick={event => console.log(event)}>Click me!</button>
-//       <Counter step={1} initialValue={0} />
-//       <Focus />
-//       <Blur />
-//       <FocusBlur />
-//       <Toggle>`&lt;Toggle&gt;Этот компонент работает&lt;/Toggle&gt;`</Toggle>
-//       <AppButton />
-//       <LoginForm onSubmit={values => console.log(values)} />
-//       <AppForm />
-//       <SignUpForm onSubmit={values => console.log(values)} />
-//       <FormId />
-//       <NameForm />
-//       <Reservation />
-//       <ErrorBoundary />
-//     </div>
-//   );
-// };
