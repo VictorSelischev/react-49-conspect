@@ -19,6 +19,8 @@ import { Modul } from './components/Modul/Modul';
 import { AppuseState } from './components/AppuseState/AppuseState';
 import { AppuseEffect } from './components/AppuseEffect/AppuseEffect';
 import { AppListDeps } from './components/AppListDeps/AppListDeps';
+import { ComponentA } from './components/ComponentA/ComponentA';
+import { ComponentB } from './components/ComponentB/ComponentB';
 
 class App extends Component {
   state = {
@@ -109,6 +111,8 @@ class App extends Component {
         <AppuseState />
         <AppuseEffect />
         <AppListDeps />
+        <ComponentA />
+        {/* <ComponentB /> */}
       </div>
     );
   }
