@@ -111,7 +111,7 @@ class App extends Component {
         <AppuseState />
         <AppuseEffect />
         <AppListDeps />
-        <ComponentA />
+        {/* <ComponentA /> */}
         {/* <ComponentB /> */}
       </div>
     );
