@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export const AppuseEffect = () => {
     const [value, setValue] = useState(0);
@@ -13,10 +13,10 @@ export const AppuseEffect = () => {
     // }, [])
 
     // componentDidUpdate
-    useEffect(() => {
-        console.log(value);
-        console.log("Updating phase: same when componentDidUpdate runs");
-    }, [value])
+    // useEffect(() => {
+    //     console.log(value);
+    //     console.log("Updating phase: same when componentDidUpdate runs");
+    // }, [value])
 
     return (
         <div>

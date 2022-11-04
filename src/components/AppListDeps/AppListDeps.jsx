@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const AppListDeps = () => {
     const [firstValue, setFirstValue] = useState(0);
     const [secondValue, setSecondValue] = useState(0);
 
-    useEffect(
-        () => {console.log(firstValue + secondValue)}, [firstValue, secondValue]
-    );
+    // useEffect(
+    //     () => {console.log(firstValue + secondValue)}, [firstValue, secondValue]
+    // );
 
     return (
         <>
